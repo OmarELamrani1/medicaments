@@ -24,12 +24,10 @@ use App\Http\Livewire\Medicaments;
 
 Route::group(['middleware' => 'auth'], function () {
 	Route::get('/', [HomeController::class, 'home']);
-	
+
 	Route::get('dashboard', function () {
 		return view('dashboard');
 	})->name('dashboard');
-
-	Route::get('Medicaments', Medicaments::class);
 
 	Route::get('billing', function () {
 		return view('billing');

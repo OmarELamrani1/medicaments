@@ -47,8 +47,6 @@
   <title>
     ddd
   </title>
-  <?php echo \Livewire\Livewire::styles(); ?>
-
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
@@ -76,7 +74,7 @@
         class="position-fixed bg-success rounded right-3 text-sm py-2 px-4">
       <p class="m-0"><?php echo e(session('success')); ?></p>
     </div>
-  <?php endif; ?>  
+  <?php endif; ?>
     <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
@@ -100,23 +98,6 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
-
-  <?php
-if (! isset($_instance)) {
-    $html = \Livewire\Livewire::mount('medicaments', [])->html();
-} elseif ($_instance->childHasBeenRendered('sDwjmqC')) {
-    $componentId = $_instance->getRenderedChildComponentId('sDwjmqC');
-    $componentTag = $_instance->getRenderedChildComponentTagName('sDwjmqC');
-    $html = \Livewire\Livewire::dummyMount($componentId, $componentTag);
-    $_instance->preserveRenderedChild('sDwjmqC');
-} else {
-    $response = \Livewire\Livewire::mount('medicaments', []);
-    $html = $response->html();
-    $_instance->logRenderedChild('sDwjmqC', $response->id(), \Livewire\Livewire::getRootElementTagName($html));
-}
-echo $html;
-?>
-  <?php echo \Livewire\Livewire::scripts(); ?>
 
 </body>
 

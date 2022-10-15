@@ -34,7 +34,6 @@
   <title>
     ddd
   </title>
-  @livewireStyles
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
   <!-- Nucleo Icons -->
@@ -62,7 +61,7 @@
         class="position-fixed bg-success rounded right-3 text-sm py-2 px-4">
       <p class="m-0">{{ session('success')}}</p>
     </div>
-  @endif  
+  @endif
     <!--   Core JS Files   -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
@@ -87,8 +86,6 @@
   <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="../assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
 
-  <livewire:medicaments />
-  @livewireScripts
 </body>
 
 </html>
